@@ -203,10 +203,24 @@ def show_subscription_status(status):
 # =========================
 
 st.set_page_config(
-    page_title="Cliente 360",
+    page_title="Stellae Studio",
     page_icon="🔎",
-    layout="wide"
+    layout="wide",
+    menu_items={
+            'Get Help': 'https://itspedromiguel.pt',
+            'Report a bug': "https://itspedromiguel.pt",
+            'About': "Its Pedro Miguel | DEV - Full Stack"
+        }
 )
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.title("🔎 Clientes Stellae Studio")
 
